@@ -17,6 +17,30 @@
 <p>Login successful.</p>
 <hr>
 
+<h2>WhatsApp Watch Tracker</h2>
+
+<input type="file" id="chatFile" accept=".txt">
+
+<br><br>
+
+<button onclick="loadChat()">Import WhatsApp Chat</button>
+
+<br><br>
+
+<table border="1" width="100%">
+<thead>
+<tr>
+<th>Dealer</th>
+<th>Watch</th>
+<th>Price</th>
+</tr>
+</thead>
+<tbody id="watchTable">
+</tbody>
+</table>
+
+<script src="script.js"></script>
+
 <h3>Add WhatsApp Chat</h3>
 
 <input type="file" id="chatFile" accept=".zip,.txt">
