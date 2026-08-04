@@ -15,11 +15,35 @@
 <div class="container">
 <h2>Welcome!</h2>
 <p>Login successful.</p>
+<hr>
 
+<h3>Add WhatsApp Chat</h3>
+
+<input type="file" id="chatFile" accept=".zip,.txt">
+
+<br><br>
+
+<button id="dealerChatBtn">
+    Add WhatsApp Chat
+</button>
+
+<p id="status"></p>
 <a href="index.html">
 <button>Go to Home</button>
 </a>
 </div>
+<script>
+document.getElementById("dealerChatBtn").onclick = function () {
+    const file = document.getElementById("chatFile").files[0];
 
+    if (!file) {
+        alert("Please select a WhatsApp chat file.");
+        return;
+    }
+
+    document.getElementById("status").innerHTML =
+        "✅ " + file.name + " selected successfully.";
+};
+</script>
 </body>
 </html>
